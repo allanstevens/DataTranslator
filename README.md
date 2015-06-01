@@ -1,8 +1,8 @@
 ﻿# Data Translator
 
-C# Console Application to convert XML file to fixed width text file.  
+C# console application to convert XML to fixed width text file.  
 
-I never needed the functionality to the reverse (text to xml) but the code stubs are already there for for futher developement.  
+I never needed the functionality to do the reverse (text to xml) but the code stubs are already there for future developement.
 
 See the UserGuide.rtf for more information.
 
