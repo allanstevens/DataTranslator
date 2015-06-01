@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Translator>
+  
+  <Source Type="XMLData" XPathLocation="/northwind/Employees/Employee">
+    <Fields>
+      <Field Name="EmployeeID" DataType="System.Int32"/>      
+      <Field Name="LastName" XPathLocation="LastName/text()" />
+      <Field Name="FirstName" XPathLocation="FirstName/text()" />
+      <Field Name="Title" XPathLocation="Title/text()"/>
+      <Field Name="TitleOfCourtesy" XPathLocation="TitleOfCourtesy/text()" />
+      <Field Name="BirthDate" DataType="System.DateTime" XPathLocation="BirthDate/text()" />
+      <Field Name="HireDate" DataType="System.DateTime" XPathLocation="HireDate/text()" />
+      <Field Name="Address" XPathLocation="Address/text()" />
+      <Field Name="City" XPathLocation="City/text()" />
+      <Field Name="Region" XPathLocation="Region/text()" />
+      <Field Name="PostalCode" XPathLocation="PostalCode/text()" />
+      <Field Name="Extension" XPathLocation="Extension/text()" />
+    </Fields>
+  </Source>
+  
+  <Target Type="FixedWidth" FileNameFormat="northwind.employees.{0:yyMMdd}.{0:hhmmss}" >
+    <Fields>
+      <Field Name="EmployeeID" Width="5" MappedField="EmployeeID" Format="{0:00000}"/>
+      <Field Name="Title" Width="20" MappedField="Title"/>
+      <Field Name="FirstName" Width="10" MappedField="FirstName"/>
+      <Field Name="LastName" Width="10" MappedField="LastName"/>
+      <Field Name="TitleOfCourtesy" Width="5" MappedField="TitleOfCourtesy"/>
+      <Field Name="BirthDate" Width="6" MappedField="BirthDate" Format="{0:ddMMyy}"/>
+      <Field Name="HireDate" Width="6" MappedField="HireDate" Format="{0:ddMMyy}"/>
+      <Field Name="Address" Width="30" MappedField="Address"/>
+      <Field Name="City" Width="10" MappedField="City"/>
+      <Field Name="Region" Width="5" MappedField="Region"/>
+      <Field Name="PostalCode" Width="5" MappedField="PostalCode"/>
+      <Field Name="Extension" Width="5" MappedField="Extension" Alignment="Right"/>
+      <Field Name="Blank" Width="3" DefaultValue="END"/>
+    </Fields>
+  </Target>
+    
+</Translator>
